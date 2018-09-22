@@ -1,2 +1,26 @@
-body{margin:0;padding:0;font-family:sans-serif}#app{margin:auto;max-width:600px}code,pre{background:#ccc;white-space:pre}pre{padding:1em;max-width:500px;overflow:auto}blockquote{line-height:2em;border-left:10px solid #ccc;font-style:italic;font-family:Courier New,Courier,monospace}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+#app {
+  margin: auto;
+  max-width: 600px;
+}
+code,
+pre {
+  background: #ccc;
+  white-space: pre;
+}
+pre {
+  padding: 1em;
+  max-width: 500px;
+  overflow: auto;
+}
+blockquote {
+  line-height: 2em;
+  border-left: 10px solid #ccc;
+  font-style: italic;
+  font-family: Courier New, Courier, monospace;
+}
 /*# sourceMappingURL=main.cdafe32a.css.map*/
