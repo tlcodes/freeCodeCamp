@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>Technical Documentation</title>
+</head>
+
+<body>
+    <nav id="navbar">
+        <header>
+            <h1>Technical Doc Page's Technical Doc</h1>
+        </header>
+        <ul>
+            <li>
+                <a href="#Introduction" class="nav-link">Introduction</a>
+            </li>
+            <li>
+                <a href="#CSS" class="nav-link">CSS</a>
+            </li>
+            <li>
+                <a href="#The_Media_Query" class="nav-link">The Media Query</a>
+            </li>
+            <li>
+                <a href="#pre_+_code" class="nav-link">pre + code</a>
+            </li>
+            <li>
+                <a href="#Notes" class="nav-link">Notes</a>
+            </li>
+        </ul>
+    </nav>
+    <main id="main-doc">
+        <section id="Introduction" class="main-section">
+            <header>
+                <h2>Introduction</h2>
+            </header>
+            <p>This technical documentation page is the thechnical documentation'page technical documentation for the freeCodeCamp Responsive Web Design Project: Build a Technical Documentation Page. </p>
+            <p>Yeah, Smart. I know.</p>
+        </section>
+        <section id="CSS" class="main-section">
+            <header>
+                <h2>CSS</h2>
+            </header>
+            <p>My first thought was to use flexbox. Just 2 boxes, one for the navbar on the left and the main section (on the right, thanks). But the challenge asks for the navbar always visible and on the left. So just some simple position: fixed and 0 from top and left should do it.</p>
+            <p>Here's the code:</p>
+
+            <pre>
+                <code>
+                    #navbar {
+                        width: 300px;
+                        position: fixed;
+                        left: 0;
+                        top: 0;
+                        height: 100%;
+                    }
+
+                    main {
+                        margin-left: 300px;
+                    }
+                </code>
+            </pre>
+        </section>
+        <section id="The_Media_Query" class="main-section">
+            <header>
+                <h2>The Media Query</h2>
+            </header>
+            <p>The media query is pretty simple. Both boxes get the whole width. The navbar is reset to its initial position. A max height is set to keep the scrollbar.</p>
+            <code>
+                    @media (max-width: 700px) { 
+                        #navbar {
+                            position:initial;
+                            width: 100%;
+                            height: 150px;
+                        }
+                        #navbar ul {
+                            height: 100px;
+                        }
+                        main {
+                            margin-left:0;
+                            margin-top: 150px;
+                        }
+                    }
+                </code>
+        </section>
+        <section id="pre_+_code" class="main-section">
+            <header>
+                <h2>pre + code</h2>
+            </header>
+            <p>The &lt;code&gt; tag is used t include code snippets in the html document. However, whitespace is removed, and line breaks won't show.</p>
+            <p>We want the browser to show line breaks and white spaces. The &lt;pre&gt; tag defines preformatted text, and will keep spaces and line breaks. We just wrap the code inside &lt;pre&gt; tags.</p>
+            <p>The media query code above is wrapped in &lt;code&gt; tags only. Here's the same code block above, now with the pre + code tags:</p>
+            <pre><code>
+                    @media (max-width: 700px) { 
+                        #navbar {
+                            position:initial;
+                            width: 100%;
+                            height: 150px;
+                        }
+                        #navbar ul {
+                            height: 100px;
+                        }
+                        main {
+                            margin-left:0;
+                            margin-top: 150px;
+                        }
+                    }
+            </code></pre>
+            <p>More readable!</p>
+        </section>
+        <section id="Notes" class="main-section">
+            <header>
+                <h2>Notes</h2>
+            </header>
+            <p>Here is a little list of some other things:</p>
+            <ul>
+                <li>Changed the font for the body to
+                    <code>font-family: Arial, Helvertica, sans-serif;</code>
+                </li>
+                <li>The nav links are styled with
+                    <code>navbar ul {list-style: none}</code> and
+                    <code>overflow: auto;</code>
+                </li>
+                <li>This cause the scrollbar for navigationto be visible because height is restricted. But it's only visible in small screen.</li>
+                <li>Padding for the navbar is set to 0 for the li element borders to reach left and right edges</li>
+                <li>Though I was not super inspired for a technical documentation page, thinking about what to include and documenting here helps my learning (I think...)</li>
+            </ul>
+        </section>
+    </main>
+</body>
+
+</html>

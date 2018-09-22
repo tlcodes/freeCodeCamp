@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" href="style.css">
+        <title>Survey Form</title>
+    </head>
+
+    <body>
+        <div class="wrapper">
+            <h1 id="title">Survey Form</h1>
+            <p id="description">Please tell us what dog types you like (sorry cats people)</p>
+            <form action="/submit-form" id="survey-form">
+
+                <label id="name-label" for="name">Name</label>
+                <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                <label id="email-label" for="Email">Email</label>
+                <input type="email" name="email" id="email" placeholder="Enter your email" required>
+                <label id="number-label" for="number">Age</label>
+                <input type="number" name="age" id="number" placeholder="Age" min="18" max="150">
+
+                <p class="owner">Are you a dog owner?</p>
+                <select name="owner" id="dropdown">
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select>
+
+                <fieldset>
+                    <legend>Dog Size</legend>
+                    <p>Dog Size</p>
+                    <ul class="answers">
+                        <li>
+                            <label for="small"><input id="small" type="radio" name="size" value="small">Small</label>
+                        </li>
+                        <li>
+                            <label for="medium"><input id="medium" type="radio" name="size" value="medium">Medium</label>
+                        </li>
+                        <li>
+                            <label for="large"><input id="large" type="radio" name="size" value="large">Large</label>
+                        </li>
+                    </ul>
+                </fieldset>
+
+                <fieldset>
+                    <legend>some other question</legend>
+                    <p>Some other question</p>
+                    <ul class="answers">
+                        <li>
+                            <label for="answer1">
+                                <input type="checkbox" name="answer" id="answer1" value="value1">Answer 1</label>
+                        </li>
+                        <li>
+                            <label for="answer2">
+                                <input type="checkbox" name="answer" id="answer2" value="value2">Answer 2</label>
+                        </li>
+                        <li>
+                            <label for="answer3">
+                                <input type="checkbox" name="answer" id="answer3" value="value3">Answer 3</label>
+                        </li>
+                    </ul>
+                </fieldset>
+                <p>Something to say before you go?</p>
+                <textarea name="comments" form="survey-form" id="textarea" cols="30" rows="10"></textarea>
+                <button id="submit" type="submit">Submit</button>
+            </form>
+        </div>
+        <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+    </body>
+</html>

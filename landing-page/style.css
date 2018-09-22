@@ -1,0 +1,234 @@
+*,
+*:after,
+*:before {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    top: 100px;
+    background: #efefef;
+    scroll-behavior: smooth;
+}
+
+header {
+    width: 100%;
+    display: flex;
+    position: fixed;
+    top: 0;
+    padding: 1rem;
+    background: white;
+    min-height: 100px;
+    align-items: center;
+}
+
+header>* {
+    flex-basis: 50%;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 40px;
+    height: 60px;
+    margin-right: 1rem;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+}
+
+main {
+    width: 80%;
+}
+
+main p,
+.box,
+.box-btn,
+form>*,
+footer ul {
+    margin-bottom: 1rem;
+}
+
+#pricing {
+    display: flex;
+    justify-content: space-evenly;
+    width: 80%;
+    flex-wrap: wrap;
+}
+
+.box {
+    text-align: center;
+    flex-basis: 300px;
+    border: 1px solid gray;
+    line-height: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.box h3 {
+    width: 100%;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    background: #ddd;
+}
+
+.box-btn {
+    padding: 1rem;
+    margin-top: 1rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    background: #ddd;
+    border: 1px solid gray;
+}
+
+.box-btn:hover {
+    cursor: pointer;
+}
+
+.price {
+    font-size: 1.3rem;
+    font-weight: bold;
+    line-height: 2rem;
+}
+
+main,
+section,
+form {
+    margin-bottom: 2rem;
+}
+
+.course {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.course-img {
+    max-height: 100px;
+    max-width: 100px;
+}
+
+.course-img img {
+    max-height: 100%;
+    max-width: 100%;
+}
+
+.course-info {
+    flex-basis: 600px;
+}
+
+#kung-fu {
+    text-align: center;
+}
+
+#pricing h3 {
+    text-transform: uppercase;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form>* {
+    padding: 0.5rem;
+}
+
+form p,
+#submit {
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+footer {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding: 2rem;
+    background: #ddd;
+    color: #333333;
+    font-size: 0.8rem;
+}
+
+footer ul {
+    display: flex;
+    list-style: none;
+}
+
+footer li {
+    padding-right: 1rem;
+}
+
+a,
+a:hover {
+    color: #000;
+    text-decoration: none;
+}
+
+a:hover {
+    color: rgb(156, 0, 0);
+}
+
+
+
+@media (max-width: 700px) {
+    header {
+        padding: 0.5rem;
+        align-content: center;
+    }
+    nav ul {
+        flex-flow: column;
+    }
+    nav li {
+        margin-top: 0.5rem;
+    }
+}
+
+@media (max-width: 500px) {
+    body {
+        top: 200px;
+    }
+    header,
+    #pricing {
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    nav ul {
+        flex-flow: column;
+        align-items: center;
+    }
+    nav li {
+        margin-top: 1rem;
+    }
+
+    .course-img {
+        display: none;
+        width: 0;
+        height: 0;
+    }
+
+    footer {
+        align-items: center;
+    }
+
+    footer li {
+        padding-right: 1rem;
+    }
+    footer p {
+        text-align: center;
+    }
+}

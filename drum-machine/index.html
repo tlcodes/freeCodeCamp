@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>Drum Machine</title>
+</head>
+<body>
+    <header><h1>Drum Machine</h1></header>
+    <div id="drum-machine">
+        <div id="pads">
+            <div class="drum-pad" id="">Q
+                <audio src="clips/BDRUM13.mp3" class="clip" id="Q"></audio>
+            </div>
+            <div class="drum-pad" id="">W
+                <audio src="clips/HHOPEN1.mp3" class="clip" id="W"></audio>
+            </div>
+            <div class="drum-pad" id="">E
+                <audio src="clips/SNARE2.mp3" class="clip" id="E"></audio>
+            </div>
+            <div class="drum-pad" id="">A
+                <audio src="clips/CRASH.mp3" class="clip" id="A"></audio>
+            </div>
+            <div class="drum-pad" id="">S
+                <audio src="clips/HHCLOSE2.mp3" class="clip" id="S"></audio>
+            </div>
+            <div class="drum-pad" id="">D
+                <audio src="clips/COWBELL1.mp3" class="clip" id="D"></audio>
+            </div>
+            <div class="drum-pad" id="">Z
+                <audio src="clips/TOMHI5.mp3" class="clip" id="Z"></audio>
+            </div>
+            <div class="drum-pad" id="">X
+                <audio src="clips/TOMMID5.mp3" class="clip" id="X"></audio>
+            </div>
+            <div class="drum-pad" id="">C
+                <audio src="clips/CLAPPO0.mp3" class="clip" id="C"></audio>
+            </div>
+        </div>
+
+        <div id="display"></div>
+    </div>
+    <footer>Thank you, <a href="http://sampleswap.org" target="_blank">SampleSwap</a>!</footer>
+
+    <script>
+        function playClip(event) {
+            // if the event was a click, the audio element is the first element Child of our target,
+            // else it's a keydown event, get the element by its id, the event.key
+            const clip = (event.type === "click") ? event.target.firstElementChild : document.getElementById(event.key.toUpperCase());
+            console.log(clip);
+            if (clip) {
+                clip.currentTime = 0;
+                clip.play()
+                document.getElementById('display').innerText = 'Playing:\n' + clip.src;
+            } else {return};
+        }
+
+        const pads = [...document.getElementsByClassName('drum-pad')];
+        pads.forEach(pad => {
+            pad.addEventListener("click", playClip);
+        });
+
+        document.addEventListener("keydown", playClip);
+    </script>
+</body>
+</html>
