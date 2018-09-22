@@ -11,31 +11,31 @@
     <header><h1>Drum Machine</h1></header>
     <div id="drum-machine">
         <div id="pads">
-            <div class="drum-pad" id="">Q
+            <div class="drum-pad" id="bassdrum">Q
                 <audio src="clips/BDRUM13.mp3" class="clip" id="Q"></audio>
             </div>
-            <div class="drum-pad" id="">W
+            <div class="drum-pad" id="hihat-open">W
                 <audio src="clips/HHOPEN1.mp3" class="clip" id="W"></audio>
             </div>
-            <div class="drum-pad" id="">E
+            <div class="drum-pad" id="snare">E
                 <audio src="clips/SNARE2.mp3" class="clip" id="E"></audio>
             </div>
-            <div class="drum-pad" id="">A
+            <div class="drum-pad" id="crash">A
                 <audio src="clips/CRASH.mp3" class="clip" id="A"></audio>
             </div>
-            <div class="drum-pad" id="">S
+            <div class="drum-pad" id="hihat-close">S
                 <audio src="clips/HHCLOSE2.mp3" class="clip" id="S"></audio>
             </div>
-            <div class="drum-pad" id="">D
+            <div class="drum-pad" id="cowbell">D
                 <audio src="clips/COWBELL1.mp3" class="clip" id="D"></audio>
             </div>
-            <div class="drum-pad" id="">Z
+            <div class="drum-pad" id="tom-hi">Z
                 <audio src="clips/TOMHI5.mp3" class="clip" id="Z"></audio>
             </div>
-            <div class="drum-pad" id="">X
+            <div class="drum-pad" id="tom-mid">X
                 <audio src="clips/TOMMID5.mp3" class="clip" id="X"></audio>
             </div>
-            <div class="drum-pad" id="">C
+            <div class="drum-pad" id="clap">C
                 <audio src="clips/CLAPPO0.mp3" class="clip" id="C"></audio>
             </div>
         </div>
@@ -53,7 +53,7 @@
             if (clip) {
                 clip.currentTime = 0;
                 clip.play()
-                document.getElementById('display').innerText = 'Playing:\n' + clip.src;
+                document.getElementById('display').innerText = 'Playing:\n' + clip.parentElement.id;
             } else {return};
         }
 
